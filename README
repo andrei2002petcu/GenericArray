@@ -1,0 +1,55 @@
+###############################################################################
+########################### README - Tema_1 IOCLA #############################
+###############################################################################
+
+In functia main am creat o bucla infinita unde se vor citi comenzile pentru
+fiecare task si se vor apela functiile necesare. Bucla se opreste la intalnirea
+comenzii exit.
+Comenzile add_last si add_at au in comun completarea structurii. Se citesc de
+la tastatura, in cate o variabila, fiecare data (*index -> pentru add_at*, tip,
+nume1, suma1, suma2, nume2). Am alocat campul 'data' in functie de tip, apoi
+copierea am realizat-o folosind memcpy. Dupa completarea structurii am apelat
+functia necesara adaugarii.
+
+############################ TASK 1 - add_last ################################
+
+Am verificat cazul in care vectorul este initial gol. Se aloca vectorul cu
+lungimea datelor pe care urmeaza sa le adaugam. Scrierea in vector se face cu
+memcpy. In cazul in care vectorul este nevid, realocam apoi adaugam datele la
+finalul vectorului curent.
+
+############################# TASK 2 - add_at #################################
+
+Se parcurge vectorul pana la index-ul indicat. In cazul in care index-ul este
+mai mare decat numarul elementelor din vector, se apeleaza functia add_last.
+In caz contrar, elementele de la adresa unde dorim adaugarea vor fi copiate
+intr-un vector auxiliar. Realizez adaugarea noilor date prin memcpy, apoi lipim
+datele din vectorul auxiliar inapoi in cel curent.
+
+############################## TASK 3 - find ##################################
+
+Se parcurge vectorul pana la index-ul indicat. Daca index-ul este negativ sau
+mai mare decat numarul elementelor din vector, functia ia sfarsit. Altfel, vom
+apela functia print cu adresa de la care incepe elementul gasit si dimensiunea
+acestuia.
+
+############################ TASK 4 - delete_at ###############################
+
+Se parcurge vectorul pana la index-ul indicat. Daca index-ul este negativ sau
+mai mare decat numarul elementelor din vector, functia ia sfarsit. Altfel, 
+stergerea se realizeaza prin suprascrierea cu memcpy a urmatorului element din
+vector, peste elementul curent.
+
+############################## TASK 5 - print #################################
+
+Functia parcurge fiecare byte al vectorului si extrage datele pentru afisare.
+Am folosit un contor pentru fiecare byte parcurs. Parcurgerea se incheie cand
+contorul ajunge egal cu lungimea vectorului. 
+Cele 2 nume au fost afisate caracter cu caracter pana la intalnirea lui '\0',
+iar sumele de bani au fost retinute in variabile corespunzatoare tipului de
+date indicat.
+
+###############################################################################
+Facultatea de Automatica si Calculatoare - Anul 1 2021-2022 - Grupa 312CCa
+PETCU Andrei - IOCLA - TEMA 1
+###############################################################################
